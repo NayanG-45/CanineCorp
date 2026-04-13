@@ -56,7 +56,7 @@ CanineCorp is a high-fidelity, cyberpunk-aesthetic recruitment platform that lev
    Open [http://localhost:3000](http://localhost:3000)
 
 ## 🔗 Demo
-[DEMO LINK PLACEHOLDER]
+[Github Repository](https://github.com/NayanG-45/CanineCorp)
 
 ---
 
