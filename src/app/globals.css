@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-neon-pink: #ff00ff;
+  --color-neon-cyan: #00ffff;
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-sirin);
+}
+
+body {
+  background-color: #050505;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Dynamic Gradient Background */
+.dynamic-bg {
+  position: fixed;
+  inset: -50%;
+  width: 200vw;
+  height: 200vh;
+  z-index: 0;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(255, 0, 255, 0.15), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.15), transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.2), transparent 40%);
+  filter: blur(80px);
+  animation: bg-shift 20s ease-in-out infinite alternate;
+}
+
+@keyframes bg-shift {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10%, 10%) scale(1.1);
+  }
+  100% {
+    transform: translate(10%, -10%) scale(1);
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-scanline {
+  animation: scanline 2s linear infinite;
+}
+
+.grid-bg {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
